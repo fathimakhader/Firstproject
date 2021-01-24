@@ -6,7 +6,7 @@ if (!empty($password)){
 $host = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbname = "register";
+$dbname = "logininfo";
 // Create connection
 $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 if (mysqli_connect_error()){
@@ -14,7 +14,7 @@ die('Connect Error ('. mysqli_connect_errno() .') '
 . mysqli_connect_error());
 }
 else{
-$sql = "INSERT INTO log (email, password)
+$sql = "INSERT INTO users (email, password)
 values ('email','$password')";
 if ($conn->query($sql)){
 echo "Login Successful";
