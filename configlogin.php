@@ -15,7 +15,7 @@ die('Connect Error ('. mysqli_connect_errno() .') '
 }
 else{
 $sql = "INSERT INTO users (email, password)
-values ('email','$password')";
+values ('$email','$password')";
 if ($conn->query($sql)){
 echo "Login Successful";
 }
